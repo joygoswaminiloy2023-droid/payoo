@@ -33,6 +33,7 @@ const balance=document.getElementById("cb");
 const currentBalance=Number(balance.innerText);
 
 let new_ammount=currentBalance+cashin_amnt;
+alert("Cash In Successfully!");
 
 balance.innerHTML=new_ammount;
 
