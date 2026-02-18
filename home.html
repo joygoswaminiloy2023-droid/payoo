@@ -68,7 +68,7 @@
     <p>Transfer Money</p>
   </button>
 
-  <button class="btn flex-col rounded-2xl  shadow-md  bg-base-100 p-5 w-full h-max">
+  <button onclick="showgetbonus()" class="btn flex-col rounded-2xl  shadow-md  bg-base-100 p-5 w-full h-max">
     <img src="./assets/opt-4.png" alt="">
     <br>
     <p>Get Bonus</p>
@@ -162,15 +162,46 @@
 </section>
 
 <!-- getbonus -->
- <section class=" mt-5  " id="transfer_m">
+ <section class=" mt-5 hidden " id="getbonus_m">
  
     <fieldset class="fieldset bg-base-100 border-base-300 rounded-xl w-full border shadow-xl p-4 m-auto ">
 <h1 class="font-bold text-black text-2xl text-center mb-2">Get Bonus</h1>
 
   <label class="label font-bold text-black">Enter Bonus Coupon</label>
-  <input type="email" class="input w-full rounded-full" placeholder="Coupon Number" id="coupon_num" />
+  <input type="email" class="input w-full rounded-full" placeholder="Coupon Number" id="coupon_num" required/>
 
   <button class="btn btn-primary mt-4 w-full rounded-full" id="bonus_btn">Get Bonus</button>
+</fieldset>
+</section>
+
+<!-- paybill -->
+ <section class="addmoney mt-10 " id="bill_m">
+  
+
+    <fieldset class="fieldset bg-base-100 border-base-300 rounded-xl w-full border p-4 m-auto">
+
+      <h1 class="font-bold text-black text-2xl text-center mb-2">Pay Bill</h1>
+           <label class="label font-bold text-black"> <i class="fa-solid fa-money-bill-transfer"></i>Bill Type</label>
+<select class="select  w-full rounded-full" id="bill_type">
+  <option disabled selected>Pay Bill</option>
+  <option value="Electicity">Electricity</option>
+  <option value="Gas">Gas</option>
+  <option value="Wifi">Wifi</option>
+    <option value="Tax">Tax</option>
+
+</select>
+
+  <label class="label font-bold text-black">Account Number</label>
+  <input type="text" class="input w-full rounded-full"  placeholder="Account Number" id="account_num" />
+
+  <label class="label font-bold text-black">Amount</label>
+  <input type="text" class="input w-full rounded-full"  placeholder="amount" id="cashin_amnt" />
+
+
+  <label class="label font-bold text-black">4 Digit Pin</label>
+  <input type="password" class="input w-full rounded-full" maxlength="4" placeholder="pin 4 digit" id="cashin_pin"/>
+
+  <button class="btn btn-primary mt-4 w-full rounded-full" id="cashin_btn">Cash IN</button>
 </fieldset>
 </section>
 
@@ -180,3 +211,5 @@
 <script src="./cashin.js"></script>
 <script src="./menu.js"></script>
 <script src="./transfermoney.js"></script>
+<script src="./get Bonus.js"></script>
+<script src="./bill.js"></script>
