@@ -26,7 +26,7 @@ if(currentBalance < cashout){
 
 
  let new_b=currentBalance-cashout;
- console.log(new_b);
+
 alert("Cash_Out Successfully!");
 
 
