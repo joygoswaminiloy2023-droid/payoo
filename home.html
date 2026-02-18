@@ -74,7 +74,7 @@
     <p>Get Bonus</p>
   </button>
 
-  <button class="btn flex-col rounded-2xl  shadow-md  bg-base-100 p-5 w-full h-max">
+  <button onclick="showpaybill()" class="btn flex-col rounded-2xl  shadow-md  bg-base-100 p-5 w-full h-max">
     <img src="./assets/opt-5.png" alt="">
     <br>
     <p>Pay Bill</p>
@@ -175,7 +175,7 @@
 </section>
 
 <!-- paybill -->
- <section class="addmoney mt-10 " id="bill_m">
+ <section class="addmoney mt-10 hidden " id="bill_m">
   
 
     <fieldset class="fieldset bg-base-100 border-base-300 rounded-xl w-full border p-4 m-auto">
@@ -191,17 +191,17 @@
 
 </select>
 
-  <label class="label font-bold text-black">Account Number</label>
-  <input type="text" class="input w-full rounded-full"  placeholder="Account Number" id="account_num" />
+  <label class="label font-bold text-black">Biller Account Number</label>
+  <input type="text" class="input w-full rounded-full"  placeholder="Account Number" id="B_account_num" />
 
-  <label class="label font-bold text-black">Amount</label>
-  <input type="text" class="input w-full rounded-full"  placeholder="amount" id="cashin_amnt" />
+  <label class="label font-bold text-black">Amount To Pay</label>
+  <input type="text" class="input w-full rounded-full"  placeholder="amount" id="bill_amnt" />
 
 
   <label class="label font-bold text-black">4 Digit Pin</label>
-  <input type="password" class="input w-full rounded-full" maxlength="4" placeholder="pin 4 digit" id="cashin_pin"/>
+  <input type="password" class="input w-full rounded-full" maxlength="4" placeholder="pin 4 digit" id="bill_pin"/>
 
-  <button class="btn btn-primary mt-4 w-full rounded-full" id="cashin_btn">Cash IN</button>
+  <button class="btn btn-primary mt-4 w-full rounded-full" id="bill_btn">Pay</button>
 </fieldset>
 </section>
 

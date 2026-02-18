@@ -3,6 +3,7 @@ function showAdd() {
     withdraw_m.classList.add('hidden');
      transfer_m.classList.add("hidden");
          getbonus_m.classList.add('hidden');
+           bill_m.classList.add('hidden');
 }
 
 function showWithdraw() {
@@ -10,6 +11,7 @@ function showWithdraw() {
     add_m.classList.add('hidden');
     transfer_m.classList.add("hidden");
         getbonus_m.classList.add('hidden');
+          bill_m.classList.add('hidden');
 }
 
 function showtransfer(){
@@ -17,10 +19,19 @@ function showtransfer(){
      add_m.classList.add('hidden');
       withdraw_m.classList.add('hidden');
         getbonus_m.classList.add('hidden');
+          bill_m.classList.add('hidden');
 }
 
 function showgetbonus(){
     getbonus_m.classList.remove('hidden');
+     transfer_m.classList.add('hidden');
+     add_m.classList.add('hidden');
+      withdraw_m.classList.add('hidden');
+        bill_m.classList.add('hidden');
+}
+function showpaybill(){
+    bill_m.classList.remove('hidden');
+    getbonus_m.classList.add('hidden');
      transfer_m.classList.add('hidden');
      add_m.classList.add('hidden');
       withdraw_m.classList.add('hidden');

@@ -1,11 +1,11 @@
 document.getElementById('bonus_btn').addEventListener("click",()=>{
 
 const couponNum=document.getElementById("coupon_num").value;
-console.log(couponNum);
+
 
 const main_b=document.getElementById('cb')//"1234"
 const current_b=Number(main_b.innerText);
-console.log(current_b,typeof(current_b))
+
 
 
 
