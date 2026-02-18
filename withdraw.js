@@ -33,9 +33,5 @@ alert("Cash_Out Successfully!");
 balance.innerText=new_b;    
     
 
-
-
-
-
 }
 );
