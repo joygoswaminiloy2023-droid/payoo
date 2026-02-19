@@ -1,3 +1,5 @@
+
+
 document.getElementById('cashin_btn').addEventListener('click',()=>{
 const bank=document.getElementById('bank').value;
 if(bank=="Bank"){
@@ -36,5 +38,18 @@ let new_ammount=currentBalance+cashin_amnt;
 alert("Cash In Successfully!");
 
 balance.innerHTML=new_ammount;
+
+// newelement create
+const history=document.getElementById('history_sec');
+const c_history=document.createElement("div");
+c_history.innerHTML=`
+   <div class=" bg-base-300 shadow-xl rounded-2xl p-2 border border-black m-2">
+<p class="m-5">
+“Tk ${cashin_amnt} credited to A/C ${AC_num} from - ${bank} Bank”
+</p>
+  </div>
+
+`
+history.appendChild(c_history);
 
 });

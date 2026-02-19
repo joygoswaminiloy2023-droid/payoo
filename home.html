@@ -20,24 +20,24 @@
 </head>
 
 
-<body class="outfit min-h-screen max-w-md bg-base-200 m-auto py-2  " >
+<body class="outfit min-h-screen max-w-md bg-base-200 m-auto pb-2  " >
   
-<div class="flex  w-full border-b-base-300 bg-base-100  shadow-md sticky items-center justify-between" >
-   <div class="max-w-48 flex gap-5 m-5">
+<div class="flex w-full border-b bg-base-100 shadow-md sticky top-0 z-50 items-center justify-between">
+  <div class="max-w-48 flex gap-5 m-5">
     <div><img src="./assets/logo.png" alt=""></div>
-    
     <div>
       <p id="cb" class="font-bold text-2xl">45000</p>
-    <p class="text-neutral/40  text-nowrap">Available Balance</p>
-  </div>
+      <p class="text-neutral/40 text-nowrap">Available Balance</p>
+    </div>
   </div>
 
   <div class="mr-2">
-    <a href="./index.html" class="px-6 py-2 border hover:bg-primary cursor-pointer hover:text-white" >
+    <button id="log_out" class="px-6 py-2 border hover:bg-primary cursor-pointer hover:text-white">
       <i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out
-    </a>
+    </button>
   </div>
 </div>
+
 
 <section class="bg-base-100 ">
 
@@ -62,7 +62,7 @@
     <p>Cash Out</p>
   </button>
 
-  <button class="btn flex-col rounded-2xl  shadow-md  bg-base-100 p-5 w-full h-max" onclick="showtransfer()">
+  <button id="t_b" class="btn flex-col rounded-2xl  shadow-md  bg-base-100 p-5 w-full h-max" onclick="showtransfer()">
     <img src="./assets/opt-3.png" alt="">
     <br>
     <p>Transfer Money</p>
@@ -80,7 +80,7 @@
     <p>Pay Bill</p>
   </button>
 
-  <button class="btn flex-col rounded-2xl  shadow-md  bg-base-100 p-5 w-full h-max">
+  <button class="btn flex-col rounded-2xl  shadow-md  bg-base-100 p-5 w-full h-max" onclick="showtrans()">
     <img src="./assets/opt-6.png" alt="">
     <br>
     <p>Transaction</p>
@@ -88,6 +88,7 @@
 
 </div>
 </section>
+
 
 <!-- cashout -->
 <section class=" mt-5 hidden " id="withdraw_m">
@@ -119,13 +120,13 @@
     <fieldset class="fieldset bg-base-100 border-base-300 rounded-xl w-full border p-4 m-auto">
 
       <h1 class="font-bold text-black text-2xl text-center mb-2">Cash In</h1>
-           <label class="label font-bold text-black"> <i class="fa-solid fa-building-columns"></i>Select Bank</label>
-<select class="select  w-full rounded-full" id="bank">
-  <option disabled selected> Bank</option>
+ <select class="select select-bordered w-full rounded-full z-50" id="bank">
+  <option disabled selected>Bank</option>
   <option value="BRAC">BRAC</option>
   <option value="DBBL">DBBL</option>
   <option value="EBBL">EBBL</option>
 </select>
+
 
   <label class="label font-bold text-black">Account Number</label>
   <input type="text" class="input w-full rounded-full"  placeholder="Account Number" id="account_num" />
@@ -205,8 +206,18 @@
 </fieldset>
 </section>
 
+
+<!-- transiction -->
+<section class="bg-base-100 border mt-5 hidden" id="history_sec">
+  <h1 class="font-bold text-black text-2xl text-center mb-2">Transiction</h1>
+
+
+
+</section>
+
 </body>
 </html>
+<script src="./logout.js"></script>
 <script src="./withdraw.js"></script>
 <script src="./cashin.js"></script>
 <script src="./menu.js"></script>

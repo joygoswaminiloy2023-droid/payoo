@@ -17,7 +17,7 @@ if(billtype==="Pay Bill"){
     alert("Please  Select Bill Type!");
     return;
 }
-else if(ba.length!=10){
+else if(ba.length!=11){
     alert("Wrong Account Number");
     return;
  
@@ -36,5 +36,20 @@ else{
     let new_b=current_balance-b_amnt;
     main_b.innerText=new_b;
 }
+
+
+// history
+const history=document.getElementById('history_sec');
+const c_history=document.createElement("div");
+c_history.innerHTML=`
+   <div class=" bg-base-300 shadow-xl rounded-2xl p-2 border border-black m-2">
+<p class="m-5">
+"Tk ${b_amnt} paid for ${billtype} from A/C ${ba}."
+
+</p>
+  </div>
+
+`
+history.appendChild(c_history);
 
 });
