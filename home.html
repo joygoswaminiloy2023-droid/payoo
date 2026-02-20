@@ -50,37 +50,37 @@
 <!-- menu -->
 <div class="grid grid-cols-3 gap-5 m-2  ">
 
-  <button class="btn flex-col bg-base-100 rounded-2xl hover:bg-primary hover:text-white transition-all ease-in-out duration-200  shadow-md  p-5 w-full h-max" onclick="showAdd()">
+  <button onclick="show('add_m')" class="btn flex-col bg-base-100 rounded-2xl hover:bg-primary hover:text-white transition-all ease-in-out duration-200  shadow-md  p-5 w-full h-max">
     <img src="./assets/opt-1.png" alt="">
     <br>
     <p>Add Money</p>
   </button>
 
-  <button class="btn bg-base-100 flex-col rounded-2xl hover:bg-primary hover:text-white transition-all ease-in-out duration-200  shadow-md  p-5 w-full h-max"  onclick="showWithdraw()">
+  <button onclick="show('withdraw_m')"  class="btn bg-base-100 flex-col rounded-2xl hover:bg-primary hover:text-white transition-all ease-in-out duration-200  shadow-md  p-5 w-full h-max"  >
     <img src="./assets/opt-2.png" alt="">
     <br>
     <p>Cash Out</p>
   </button>
 
-  <button id="t_b" class="btn flex-col rounded-2xl  shadow-md  bg-base-100 hover:bg-primary hover:text-white transition-all ease-in-out duration-200  p-5 w-full h-max" onclick="showtransfer()">
+  <button onclick="show('transfer_m')"  class="btn flex-col rounded-2xl  shadow-md  bg-base-100 hover:bg-primary hover:text-white transition-all ease-in-out duration-200  p-5 w-full h-max" >
     <img src="./assets/opt-3.png" alt="">
     <br>
     <p>Transfer Money</p>
   </button>
 
-  <button onclick="showgetbonus()" class="btn flex-col rounded-2xl  shadow-md hover:bg-primary hover:text-white transition-all ease-in-out duration-200   bg-base-100 p-5 w-full h-max">
+  <button onclick="show('getbonus_m')"  class="btn flex-col rounded-2xl  shadow-md hover:bg-primary hover:text-white transition-all ease-in-out duration-200   bg-base-100 p-5 w-full h-max">
     <img src="./assets/opt-4.png" alt="">
     <br>
     <p>Get Bonus</p>
   </button>
 
-  <button onclick="showpaybill()" class="btn flex-col rounded-2xl hover:bg-primary hover:text-white transition-all ease-in-out duration-200  shadow-md  bg-base-100 p-5 w-full h-max">
+  <button onclick="show('bill_m')" class="btn flex-col rounded-2xl hover:bg-primary hover:text-white transition-all ease-in-out duration-200  shadow-md  bg-base-100 p-5 w-full h-max">
     <img src="./assets/opt-5.png" alt="">
     <br>
     <p>Pay Bill</p>
   </button>
 
-  <button class="btn flex-col rounded-2xl  shadow-md hover:bg-primary hover:text-white transition-all ease-in-out duration-200  bg-base-100 p-5 w-full h-max" onclick="showtrans()">
+  <button onclick="show('history_sec')"  class="btn flex-col rounded-2xl  shadow-md hover:bg-primary hover:text-white transition-all ease-in-out duration-200  bg-base-100 p-5 w-full h-max" >
     <img src="./assets/opt-6.png" alt="">
     <br>
     <p>Transaction</p>
@@ -217,6 +217,7 @@
 
 </body>
 </html>
+<script src="./machine.js"></script>
 <script src="./logout.js"></script>
 <script src="./withdraw.js"></script>
 <script src="./cashin.js"></script>
@@ -224,3 +225,4 @@
 <script src="./transfermoney.js"></script>
 <script src="./get Bonus.js"></script>
 <script src="./bill.js"></script>
+

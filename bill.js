@@ -37,19 +37,9 @@ else{
     main_b.innerText=new_b;
 }
 
-
+alert("Bill successfully Payed ")
 // history
-const history=document.getElementById('history_sec');
-const c_history=document.createElement("div");
-c_history.innerHTML=`
-   <div class=" bg-base-300 shadow-xl rounded-2xl p-2 border border-black m-2">
-<p class="m-5">
-"Tk ${b_amnt} paid for ${billtype} from A/C ${ba}."
 
-</p>
-  </div>
-
-`
-history.appendChild(c_history);
+    historyAdd('history_sec',b_amnt,ba," ",billtype);
 
 });

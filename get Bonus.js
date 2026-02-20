@@ -1,6 +1,7 @@
 document.getElementById('bonus_btn').addEventListener("click",()=>{
 
-const couponNum=document.getElementById("coupon_num").value;
+// const couponNum=document.getElementById("coupon_num").value;
+const couponNum=getInput('coupon_num');
 
 
 const main_b=document.getElementById('cb')//"1234"
@@ -22,18 +23,8 @@ else{
     main_b.innerText=new_b;
 }
 // history
-const history=document.getElementById('history_sec');
-const c_history=document.createElement("div");
-c_history.innerHTML=`
-   <div class=" bg-base-300 shadow-xl rounded-2xl p-2 border border-black m-2">
-<p class="m-5">
-“Tk 50 credited ”
-</p>
-  </div>
 
-`
-history.appendChild(c_history);
-
+    historyAdd('history_sec',"50","Credited" ," ","Bonus Added");
 
 
 })

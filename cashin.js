@@ -1,14 +1,20 @@
 
 
 document.getElementById('cashin_btn').addEventListener('click',()=>{
-const bank=document.getElementById('bank').value;
+
+    const AC_num=document.getElementById('account_num').value;
+const bank=getInput('bank');
+const cashin_amnt=Number(getInput('cashin_amnt'));
+const cashin_pin=getInput('cashin_pin');
+
+
 if(bank=="Bank"){
        alert("Select A Bank");
        return;
 }
 console.log(bank);
 
-const AC_num=document.getElementById('account_num').value;
+
 if(AC_num.length!=10){
     alert("Wrong account Number");
     return;
@@ -16,14 +22,14 @@ if(AC_num.length!=10){
 }
     console.log(AC_num);
 
-const cashin_amnt=Number(document.getElementById('cashin_amnt').value);
+
 if(cashin_amnt>50000){
     alert("limit Exceed");
     return;
 }
 console.log(cashin_amnt)
 
-const cashin_pin=document.getElementById('cashin_pin').value;
+
 console.log(cashin_pin)
 if(cashin_pin!="1234"){
     alert("Wrong Pin");
@@ -31,25 +37,14 @@ if(cashin_pin!="1234"){
 }
 console.log(cashin_pin);
 
-const balance=document.getElementById("cb");
-const currentBalance=Number(balance.innerText);
+const currentBalance=Number(getInnerTxt('cb'));
 
 let new_ammount=currentBalance+cashin_amnt;
 alert("Cash In Successfully!");
 
-balance.innerHTML=new_ammount;
+document.getElementById('cb').innerText=new_ammount;
+// historyAdd
 
-// newelement create
-const history=document.getElementById('history_sec');
-const c_history=document.createElement("div");
-c_history.innerHTML=`
-   <div class=" bg-base-300 shadow-xl rounded-2xl p-2 border border-black m-2">
-<p class="m-5">
-“Tk ${cashin_amnt} credited to A/C ${AC_num} from - ${bank} Bank”
-</p>
-  </div>
-
-`
-history.appendChild(c_history);
+    historyAdd('history_sec',cashin_amnt,AC_num ,bank,"Credited");
 
 });
