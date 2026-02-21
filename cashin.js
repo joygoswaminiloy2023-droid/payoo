@@ -47,4 +47,5 @@ document.getElementById('cb').innerText=new_ammount;
 
     historyAdd('history_sec',cashin_amnt,AC_num ,bank,"Credited");
 
+
 });

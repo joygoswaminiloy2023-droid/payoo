@@ -21,7 +21,10 @@ else if(couponNum==="94"){
 else{
     let new_b=current_b+50;
     main_b.innerText=new_b;
+    alert("Bonus Added!")
 }
+
+
 // history
 
     historyAdd('history_sec',"50","Credited" ," ","Bonus Added");

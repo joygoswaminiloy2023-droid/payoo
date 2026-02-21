@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@
 
 <body class="outfit min-h-screen max-w-md bg-base-200 m-auto pb-2  " >
   
-<div class="flex w-full border-b bg-base-100 shadow-md sticky top-0 z-50 items-center justify-between">
+<div class="flex w-full border-b border-primary bg-base-100 shadow-md sticky top-0 z-50 items-center justify-between">
   <div class="max-w-48 flex gap-5 m-5">
     <div><img src="./assets/logo.png" alt=""></div>
     <div>
@@ -32,7 +32,7 @@
   </div>
 
   <div class="mr-2">
-    <button id="log_out" class="px-6 py-2 border hover:bg-primary cursor-pointer hover:text-white">
+    <button id="log_out" class="px-6 py-2 border hover:bg-primary rounded-xl border-primary cursor-pointer hover:text-white">
       <i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out
     </button>
   </div>
@@ -50,37 +50,37 @@
 <!-- menu -->
 <div class="grid grid-cols-3 gap-5 m-2  ">
 
-  <button onclick="show('add_m')" class="btn flex-col bg-base-100 rounded-2xl hover:bg-primary hover:text-white transition-all ease-in-out duration-200  shadow-md  p-5 w-full h-max">
+  <button onclick="show('add_m','A_BTN')" id="A_BTN" class="btn flex-col bg-base-100 border-primary rounded-2xl hover:bg-primary hover:text-white transition-all ease-in-out duration-200  shadow-md  p-5 w-full h-max">
     <img src="./assets/opt-1.png" alt="">
     <br>
     <p>Add Money</p>
   </button>
 
-  <button onclick="show('withdraw_m')"  class="btn bg-base-100 flex-col rounded-2xl hover:bg-primary hover:text-white transition-all ease-in-out duration-200  shadow-md  p-5 w-full h-max"  >
+  <button onclick="show('withdraw_m','C_BTN')"  id="C_BTN" class="btn bg-base-100 flex-col border-primary rounded-2xl hover:bg-primary hover:text-white transition-all ease-in-out duration-200  shadow-md  p-5 w-full h-max"  >
     <img src="./assets/opt-2.png" alt="">
     <br>
     <p>Cash Out</p>
   </button>
 
-  <button onclick="show('transfer_m')"  class="btn flex-col rounded-2xl  shadow-md  bg-base-100 hover:bg-primary hover:text-white transition-all ease-in-out duration-200  p-5 w-full h-max" >
+  <button onclick="show('transfer_m','T_BTN')" id="T_BTN"  class="btn flex-col rounded-2xl border-primary shadow-md  bg-base-100 hover:bg-primary hover:text-white transition-all ease-in-out duration-200  p-5 w-full h-max" >
     <img src="./assets/opt-3.png" alt="">
     <br>
     <p>Transfer Money</p>
   </button>
 
-  <button onclick="show('getbonus_m')"  class="btn flex-col rounded-2xl  shadow-md hover:bg-primary hover:text-white transition-all ease-in-out duration-200   bg-base-100 p-5 w-full h-max">
+  <button onclick="show('getbonus_m','G_BTN')" id="G_BTN" class="btn flex-col rounded-2xl border-primary  shadow-md hover:bg-primary hover:text-white transition-all ease-in-out duration-200   bg-base-100 p-5 w-full h-max">
     <img src="./assets/opt-4.png" alt="">
     <br>
     <p>Get Bonus</p>
   </button>
 
-  <button onclick="show('bill_m')" class="btn flex-col rounded-2xl hover:bg-primary hover:text-white transition-all ease-in-out duration-200  shadow-md  bg-base-100 p-5 w-full h-max">
+  <button onclick="show('bill_m','P_BTN')" id="P_BTN" class="btn flex-col rounded-2xl border-primary hover:bg-primary hover:text-white transition-all ease-in-out duration-200  shadow-md  bg-base-100 p-5 w-full h-max">
     <img src="./assets/opt-5.png" alt="">
     <br>
     <p>Pay Bill</p>
   </button>
 
-  <button onclick="show('history_sec')"  class="btn flex-col rounded-2xl  shadow-md hover:bg-primary hover:text-white transition-all ease-in-out duration-200  bg-base-100 p-5 w-full h-max" >
+  <button onclick="show('history_sec','TR_BTN' )" id="TR_BTN"  class="btn flex-col rounded-2xl  border-primary shadow-md hover:bg-primary hover:text-white transition-all ease-in-out duration-200  bg-base-100 p-5 w-full h-max" >
     <img src="./assets/opt-6.png" alt="">
     <br>
     <p>Transaction</p>
@@ -98,14 +98,14 @@
   <h1 class="font-bold text-black text-2xl text-center mb-2">Cash Out</h1>
 
   <label class="label font-bold text-black">Agent Number</label>
-  <input type="email" class="input w-full rounded-full" placeholder="Mobile Number" id="agent_num" />
+  <input type="email" class="input w-full rounded-full border-primary focus:outline-none" placeholder="Mobile Number" id="agent_num" />
 
   <label class="label font-bold text-black">Amount</label>
-  <input type="text" class="input w-full rounded-full"  placeholder="Amount" id="amnt" />
+  <input type="text" class="input w-full rounded-full border-primary focus:outline-none"  placeholder="Amount" id="amnt" />
 
 
   <label class="label font-bold text-black">4 Digit Pin</label>
-  <input type="password" class="input w-full rounded-full" maxlength="4" placeholder="4-Digit Pin" id="withdraw_pin" />
+  <input type="password" class="input w-full rounded-full border-primary focus:outline-none" maxlength="4" placeholder="4-Digit Pin" id="withdraw_pin" />
 
   <button class="btn btn-primary mt-4 w-full rounded-full" id="w_btn">withdraw</button>
 </fieldset>
@@ -120,7 +120,7 @@
     <fieldset class="fieldset bg-base-100 border-base-300 rounded-xl w-full border p-4 m-auto">
 
       <h1 class="font-bold text-black text-2xl text-center mb-2">Cash In</h1>
- <select class="select select-bordered w-full rounded-full z-50" id="bank">
+ <select class="select select-bordered w-full rounded-full z-50 border-primary focus:ring-red-100" id="bank">
   <option disabled selected>Bank</option>
   <option value="BRAC">BRAC</option>
   <option value="DBBL">DBBL</option>
@@ -128,17 +128,17 @@
 </select>
 
 
-  <label class="label font-bold text-black">Account Number</label>
-  <input type="text" class="input w-full rounded-full"  placeholder="Account Number" id="account_num" />
+  <label class="label font-bold text-black ">Account Number</label>
+  <input type="text" class="input w-full rounded-full border-primary focus:outline-none"  placeholder="Account Number" id="account_num" />
 
   <label class="label font-bold text-black">Amount</label>
-  <input type="text" class="input w-full rounded-full"  placeholder="amount" id="cashin_amnt" />
+  <input type="text" class="input w-full rounded-full border-primary focus:outline-none"  placeholder="amount" id="cashin_amnt" />
 
 
   <label class="label font-bold text-black">4 Digit Pin</label>
-  <input type="password" class="input w-full rounded-full" maxlength="4" placeholder="pin 4 digit" id="cashin_pin"/>
+  <input type="password" class="input w-full rounded-full border-primary focus:outline-none" maxlength="4" placeholder="pin 4 digit" id="cashin_pin"/>
 
-  <button class="btn btn-primary mt-4 w-full rounded-full" id="cashin_btn">Cash IN</button>
+  <button class="btn btn-primary mt-4 w-full rounded-full border-primary focus:outline-none" id="cashin_btn">Cash IN</button>
 </fieldset>
 </section>
 
@@ -149,14 +149,14 @@
 <h1 class="font-bold text-black text-2xl text-center mb-2">Money Transfer</h1>
 
   <label class="label font-bold text-black">User Account Number</label>
-  <input type="email" class="input w-full rounded-full" placeholder="Mobile Number" id="user_num" />
+  <input type="email" class="input w-full rounded-full border-primary focus:outline-none" placeholder="Mobile Number" id="user_num" />
 
   <label class="label font-bold text-black">Amount</label>
-  <input type="text" class="input w-full rounded-full"  placeholder="Amount" id="transfer_amnt" />
+  <input type="text" class="input w-full rounded-full border-primary focus:outline-none"  placeholder="Amount" id="transfer_amnt" />
 
 
-  <label class="label font-bold text-black">4 Digit Pin</label>
-  <input type="password" class="input w-full rounded-full" maxlength="4" placeholder="4-Digit Pin" id="transfer_pin" />
+  <label class="label font-bold text-black ">4 Digit Pin</label>
+  <input type="password" class="input w-full rounded-full border-primary focus:outline-none" maxlength="4" placeholder="4-Digit Pin" id="transfer_pin" />
 
   <button class="btn btn-primary mt-4 w-full rounded-full" id="transfer_btn">Send Now</button>
 </fieldset>
@@ -169,7 +169,7 @@
 <h1 class="font-bold text-black text-2xl text-center mb-2">Get Bonus</h1>
 
   <label class="label font-bold text-black">Enter Bonus Coupon</label>
-  <input type="email" class="input w-full rounded-full" placeholder="Coupon Number" id="coupon_num" required/>
+  <input type="email" class="input w-full rounded-full border-primary focus:outline-none" placeholder="Coupon Number" id="coupon_num" required/>
 
   <button class="btn btn-primary mt-4 w-full rounded-full" id="bonus_btn">Get Bonus</button>
 </fieldset>
@@ -183,7 +183,7 @@
 
       <h1 class="font-bold text-black text-2xl text-center mb-2">Pay Bill</h1>
            <label class="label font-bold text-black"> <i class="fa-solid fa-money-bill-transfer"></i>Bill Type</label>
-<select class="select  w-full rounded-full" id="bill_type">
+<select class="select  w-full rounded-full border-primary focus:outline-none" id="bill_type">
   <option disabled selected>Pay Bill</option>
   <option value="Electicity">Electricity</option>
   <option value="Gas">Gas</option>
@@ -193,14 +193,14 @@
 </select>
 
   <label class="label font-bold text-black">Biller Account Number</label>
-  <input type="text" class="input w-full rounded-full"  placeholder="Account Number" id="B_account_num" />
+  <input type="text" class="input w-full rounded-full border-primary focus:outline-none"  placeholder="Account Number" id="B_account_num" />
 
   <label class="label font-bold text-black">Amount To Pay</label>
-  <input type="text" class="input w-full rounded-full"  placeholder="amount" id="bill_amnt" />
+  <input type="text" class="input w-full rounded-full border-primary focus:outline-none"  placeholder="amount" id="bill_amnt" />
 
 
   <label class="label font-bold text-black">4 Digit Pin</label>
-  <input type="password" class="input w-full rounded-full" maxlength="4" placeholder="pin 4 digit" id="bill_pin"/>
+  <input type="password" class="input w-full rounded-full border-primary focus:outline-none" maxlength="4" placeholder="pin 4 digit" id="bill_pin"/>
 
   <button class="btn btn-primary mt-4 w-full rounded-full" id="bill_btn">Pay</button>
 </fieldset>
@@ -208,8 +208,8 @@
 
 
 <!-- transiction -->
-<section class="bg-base-100 border mt-5 hidden" id="history_sec">
-  <h1 class="font-bold text-black text-2xl text-center mb-2">Transiction</h1>
+<section class="bg-base-100 border mt-5 hidden border-primary rounded-2xl" id="history_sec">
+  <h1 class="font-bold text-black text-2xl text-center mb-2 ">Transiction</h1>
 
 
 
